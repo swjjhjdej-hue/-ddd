@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقعي</title>
-  <style>
-    body {
-      font-family: -apple-system, "Segoe UI", Tahoma, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background: #f5f5f5;
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هلا بيك</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    font-family: 'Tahoma', 'Segoe UI', sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.4rem;
+    color: #38bdf8;
+    direction: ltr;
+  }
+</style>
 </head>
 <body>
-  <div>
-    <h1>مرحبًا 👋</h1>
-    <p>هذا الموقع يعمل الآن بنجاح على GitHub Pages.</p>
-  </div>
+  <h1>هلا بيك 👋</h1>
+  <p id="domain">جاري التحميل...</p>
+
+  <script>
+    document.getElementById('domain').textContent = window.location.hostname;
+  </script>
 </body>
 </html>
