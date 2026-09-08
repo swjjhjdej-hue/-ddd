@@ -3,90 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>المتجر</title>
-
+  <title>موقعي</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      font-family: -apple-system, "Segoe UI", Tahoma, sans-serif;
       display: flex;
-      justify-content: center;
       align-items: center;
-      min-height: 100vh;
-    }
-
-    .box {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
       text-align: center;
-      max-width: 500px;
-      width: 90%;
     }
-
     h1 {
-      margin-bottom: 15px;
-    }
-
-    .domain {
-      font-size: 24px;
-      font-weight: bold;
-      direction: ltr;
-      margin: 20px 0;
-    }
-
-    .subdomain {
-      color: #666;
-      font-size: 18px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-
-  <div class="box">
-
-    <h1>مرحباً بك 👋</h1>
-
-    <div class="subdomain">
-      أنت قادم من:
-    </div>
-
-    <div id="domain" class="domain">
-      جاري التعرف...
-    </div>
-
-    <div id="storeName"></div>
-
+  <div>
+    <h1>مرحبًا 👋</h1>
+    <p>هذا الموقع يعمل الآن بنجاح على GitHub Pages.</p>
   </div>
-
-  <script>
-
-    // الحصول على اسم الدومين الحالي
-    const hostname = window.location.hostname;
-
-    // عرض الدومين
-    document.getElementById("domain").textContent = hostname;
-
-    // استخراج اسم الدومين الفرعي
-    const parts = hostname.split(".");
-
-    let subdomain = "";
-
-    if (parts.length >= 3) {
-      subdomain = parts[0];
-    }
-
-    // عرض اسم الدومين الفرعي
-    if (subdomain) {
-      document.getElementById("storeName").innerHTML =
-        `<p>اسم المتجر: <strong>${subdomain}</strong></p>`;
-    }
-
-  </script>
-
 </body>
 </html>
